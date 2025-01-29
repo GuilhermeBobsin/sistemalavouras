@@ -19,7 +19,7 @@ return new class extends Migration
         $table->decimal('preco_unitario', 10, 2);
         $table->decimal('total', 10, 2)->virtualAs('quantidade * preco_unitario');
         $table->string('status_pedido' , 50)->default('Pendente');
-        $table->timestamps(); // 'created_at' e 'updated_at' serão gerenciados automaticamente pelo Laravel
+        $table->timestamps(); 
     });
 }
 

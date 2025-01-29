@@ -54,9 +54,9 @@
                                     <td>{{ $pedido->id }}</td>
                                     <td>{{ $pedido->produto }}</td>
                                     <td>{{ $pedido->cliente->nome}}</td>
-                                    <td>{{ $pedido->quantidade }}</td>
-                                    <td>{{ $pedido->preco_unitario }}</td>
-                                    <td>{{ $pedido->total }}</td>
+                                    <td>{{ $pedido->quantidade }} dz</td>
+                                    <td>R${{ $pedido->preco_unitario }}</td>
+                                    <td>R${{ $pedido->total }}</td>
                                     <td>{{ $pedido->status_pedido}}</td>
                                     <td>{{ $pedido->created_at->format('d/m/Y') }}</td>
                                     <td>
@@ -196,7 +196,4 @@
 @stop
 
 @section('js')
-    <script>
-        console.log("Página de criação de pedido.");
-    </script>
 @stop
