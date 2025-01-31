@@ -147,6 +147,13 @@ return [
 
 
         [
+            'text' => ' Menu Principal',
+            'url' => 'dashboard',
+            'icon' => 'fas fa-home',
+            'active' => ['dashboard' , 'dashboard/*']
+        ],
+
+        [
             'text' => ' Clientes',
             'url' => 'clientes',
             'icon' => 'fas fa-fw fa-user',

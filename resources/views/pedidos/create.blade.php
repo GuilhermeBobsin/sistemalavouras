@@ -28,15 +28,15 @@
             <label for="produto" class="form-label">Produto</label>
             <select name="produto" id="produto" class="form-select" required>
                 <option value="" selected disabled>Selecione um produto</option>
-                <option value="Alface Americana">Alface Americana</option>
-                <option value="Alface Crespa">Alface Crespa</option>
-                <option value="Alface Mimosa Roxa">Alface Mimosa Roxa</option>
-                <option value="Alface Mimosa Verde">Alface Mimosa Verde</option>
-                <option value="Alface Chicória">Alface Chicória</option>
-                <option value="Alface Lisa">Alface Lisa</option>
-                <option value="Brócolis">Brócolis</option>
-                <option value="Repolho">Repolho</option>
-                <option value="Couve-Flor">Couve-Flor</option>
+                <option value="americana">Alface Americana</option>
+                <option value="crespa">Alface Crespa</option>
+                <option value="mimosaroxa">Alface Mimosa Roxa</option>
+                <option value="mimosaverde">Alface Mimosa Verde</option>
+                <option value="chicoria">Alface Chicória</option>
+                <option value="lisa">Alface Lisa</option>
+                <option value="brocolis">Brócolis</option>
+                <option value="repolho">Repolho</option>
+                <option value="couveflor">Couve-Flor</option>
             </select>
         </div>
 
@@ -56,10 +56,9 @@
         <div class="mb-3">
             <label for="status_pedido" class="form-label">Status do Pedido</label>
             <select name="status_pedido" id="status_pedido" class="form-select">
-                <option value="Pendente" selected>Pendente</option>
-                <option value="Confirmado">Confirmado</option>
-                <option value="Entregue">Entregue</option>
-                <option value="Cancelado">Cancelado</option>
+                <option value="pendente" selected>Pendente</option>
+                <option value="concluido">Concluído</option>
+                <option value="cancelado">Cancelado</option>
             </select>
         </div>
 

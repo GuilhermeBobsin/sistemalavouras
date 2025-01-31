@@ -7,11 +7,13 @@ use App\Http\Controllers\PedidoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
 
 Auth::routes();
+
+Route::get('controleDuzias', [HomeController::class, 'duzias']);
 
 Route::get('/dashboard', [HomeController::class, 'index']);
 

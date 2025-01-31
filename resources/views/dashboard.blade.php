@@ -11,24 +11,24 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-info">
+            <div class="small-box bg-primary">
               <div class="inner">
               <h3>{{ $clientes }}</h3>
 
                 <p>Clientes Registrados</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-person"></i>
               </div>
               <a href="/clientes" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-success">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>{{$pedidos}}</h3>
-
-                <p>Novos Pedidos</p>
+                
+                <p>Todos os Pedidos</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -37,14 +37,27 @@
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-warning">
+            <div class="small-box bg-success">
               <div class="inner">
-                <h3>44</h3>
+                <h3>{{ $pedidosConcluidos}}</h3>
 
                 <p>Pedidos Concluídos</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box" style="background-color: orange;" >
+              <div class="inner">
+                <h3>{{ $pedidosPendentes}}</h3>
+
+                <p>Pedidos Pendentes</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
               </div>
               <a href="#" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -52,16 +65,30 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3>{{ $pedidosCancelados}}</h3>
 
-                <p>Unique Visitors</p>
+                <p>Pedidos Cancelados</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>''
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{ $duzias}}</h3>
+
+                <p>Duzias Colhidas</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="/controleDuzias" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+          
         </div>
             <div class="card">
               <div class="card-header ui-sortable-handle" style="cursor: move;">
@@ -209,7 +236,8 @@
 @stop
 
 @section('css')
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+    <link rel="stylesheet" href="/css/admin_custom.css"> 
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @stop
 
 @section('js')
