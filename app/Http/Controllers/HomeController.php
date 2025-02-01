@@ -9,6 +9,24 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
+    public function pedidosPendentes()
+    {
+        $pedidosPendentes = Pedido::where('status_pedido', 'pendente')->get();
+        return view('pedidosPendentes', compact('pedidosPendentes'));
+    }
+
+    public function pedidosCancelados()
+    {
+        $pedidosCancelados = Pedido::where('status_pedido', 'cancelado')->get();
+        return view('pedidosCancelados', compact('pedidosCancelados'));
+    }
+
+    public function pedidosConcluidos()
+    {
+        $pedidosConcluidos = Pedido::where('status_pedido', 'concluido')->get();
+        return view('pedidosConcluidos', compact('pedidosConcluidos'));
+    }
+
     public function duzias()
     {
         $alfaceCrespa = Pedido::where('produto', 'crespa')->sum('quantidade');
