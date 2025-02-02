@@ -12,6 +12,58 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3 col-6">
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>{{$pedidos}}</h3>
+                
+                <p>Todos os Pedidos</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-document-text"></i>
+              </div>
+              <a href="/pedidos" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{ $pedidosConcluidos}}</h3>
+
+                <p>Pedidos Concluídos</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <a href="/pedidosConcluidos" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>{{ $pedidosPendentes}}</h3>
+
+                <p>Pedidos Pendentes</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-hourglass-half"></i>
+              </div>
+              <a href="/pedidosPendentes" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>{{ $pedidosCancelados}}</h3>
+
+                <p>Pedidos Cancelados</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-times-circle"></i>
+              </div>
+              <a href="/pedidosCancelados" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
             <div class="small-box bg-primary">
               <div class="inner">
               <h3>{{ $clientes }}</h3>
@@ -25,97 +77,44 @@
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>{{$pedidos}}</h3>
-                
-                <p>Todos os Pedidos</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="/pedidos" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>{{ $pedidosConcluidos}}</h3>
-
-                <p>Pedidos Concluídos</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="/pedidosConcluidos" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="small-box" style="background-color: orange;" >
-              <div class="inner">
-                <h3>{{ $pedidosPendentes}}</h3>
-
-                <p>Pedidos Pendentes</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="/pedidosPendentes" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>{{ $pedidosCancelados}}</h3>
-
-                <p>Pedidos Cancelados</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="/pedidosCancelados" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
-            </div>''
-          </div>
-          <div class="col-lg-3 col-6">
-            <div class="small-box bg-info">
+            <div class="small-box bg-teal">
               <div class="inner">
                 <h3>{{ $duzias}}</h3>
 
                 <p>Duzias Colhidas</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-leaf"></i>
               </div>
               <a href="/controleDuzias" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-success">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h3>Mapa</h3>
 
                 <p>Demarcação da lavoura</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-map"></i>
               </div>
               <a href="https://www.google.com/maps/d/edit?mid=1v3JenLFwTeJtDXwX_r1GawlHTJY5A3o&usp=sharing" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">
-            <div class="small-box bg-success">
+            <div class="small-box bg-purple">
               <div class="inner">
                 <h3>Plantios</h3>
 
                 <p>Épocas de produções</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-calendar"></i>
               </div>
-              <a href="/controleDuzias" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/calendarioagricola" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          
 @stop
 
 @section('css')

@@ -35,8 +35,17 @@ class HomeController extends Controller
     public function duzias()
     {
         $alfaceCrespa = Pedido::where('produto', 'crespa')->sum('quantidade');
+        $alfaceAmericana = Pedido::where('produto', 'americana')->sum('quantidade');
+        $alfaceLisa = Pedido::where('produto', 'lisa')->sum('quantidade');
         $mimosaVerde = Pedido::where('produto', 'mimosaverde')->sum('quantidade');
-        return view('controleduzias', compact('alfaceCrespa', 'mimosaVerde'));
+        $mimosaRoxa = Pedido::where('produto', 'mimosaroxa')->sum('quantidade');
+        $alfaceChicoria = Pedido::where('produto', 'chicoria')->sum('quantidade');
+        $brocolis = Pedido::where('produto', 'brocolis')->sum('quantidade');
+        $repolho = Pedido::where('produto', 'repolho')->sum('quantidade');
+        $couveFlor = Pedido::where('produto', 'couveflor')->sum('quantidade');
+
+        return view('controleduzias', compact('alfaceCrespa', 'alfaceAmericana', 
+        'alfaceLisa', 'mimosaVerde', 'mimosaRoxa', 'alfaceChicoria', 'brocolis', 'repolho', 'couveFlor'));
     }
 
 
