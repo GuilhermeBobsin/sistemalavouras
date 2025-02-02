@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CalculadoraController;
+use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PedidoController;
@@ -12,6 +13,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/calendarioagricola', [HomeController::class, 'calendarioAgricola']);
 
 Route::get('controleDuzias', [HomeController::class, 'duzias']);
 

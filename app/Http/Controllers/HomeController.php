@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
+    public function calendarioAgricola()
+    {
+        return view('calendarioagricola');
+    }
+
     public function pedidosPendentes()
     {
         $pedidosPendentes = Pedido::where('status_pedido', 'pendente')->get();
