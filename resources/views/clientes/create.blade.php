@@ -86,7 +86,10 @@
 @stop
 
 @section('js')
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js"></script>
     <script>
-        console.log("Página de criação de cliente.");
+        const telefoneInput = document.getElementById('telefone');
+        const im = new Inputmask('(99) 99999-9999');
+        im.mask(telefoneInput);
     </script>
 @stop

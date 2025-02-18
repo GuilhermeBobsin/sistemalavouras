@@ -44,4 +44,17 @@ class ClienteController extends Controller
         return redirect('clientes')->with('success', 'cliente deleted successfully.');
     }
 
+    public function showPedidos($id)
+    {
+        // Encontre o cliente pelo ID
+        $cliente = Cliente::findOrFail($id);
+
+        // Recupere os pedidos relacionados ao cliente
+        $pedidos = $cliente->pedidos; // Supondo que o relacionamento já exista
+
+        // Retorne a view com os pedidos
+        return view('clientes.pedidos', compact('cliente', 'pedidos'));
+    }
+
+
 }

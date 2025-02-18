@@ -11,14 +11,6 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <a class="hid" href="pedidos/create">
-                        <button class="custom-btn">
-                            <div class="btn-icon">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                            Novo Pedido
-                        </button>
-                    </a>
                 
                     <div class="card-tools d-flex ml-auto">
                         <div class="input-group input-group-md " style="width: 450px;">
@@ -60,11 +52,9 @@
                                     <td>{{ $pedido->status_pedido}}</td>
                                     <td>{{ $pedido->created_at->format('d/m/Y') }}</td>
                                     <td>
-
                                         <a href="{{ url('pedidos/'.$pedido->id.'/edit') }}" class="btn btn-sm" title="Editar pedido">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg>
                                         </a>
-
                                         <form action="{{ url('pedidos/'.$pedido->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
@@ -72,25 +62,6 @@
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75ZM4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.748 1.748 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15ZM6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25Z"></path></svg>
                                             </button>
                                         </form>
-
-                                        @if($pedido->status_pedido != 'Concluído' and $pedido->status_pedido != 'Cancelado')
-                                            <form action="{{ route('pedidos.concluir', $pedido->id) }}" method="POST" style="display:inline;">
-                                                @csrf
-                                                <button type="submit" class="btn btn-sm" title="Concluir pedido">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
-                                                </button>
-                                            </form>
-                                        @endif
-
-                                        @if($pedido->status_pedido != 'Cancelado' and $pedido->status_pedido != 'Concluído')
-                                            <form action="{{ route('pedidos.cancelar', $pedido->id) }}" method="POST" style="display:inline;">
-                                                @csrf
-                                                <button type="submit" class="btn btn-sm" title="Cancelar pedido">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
-                                                </button>
-                                            </form>
-                                        @endif
-
                                     </td>
                                 </tr>
                             @endforeach

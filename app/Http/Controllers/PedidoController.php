@@ -13,7 +13,6 @@ class PedidoController extends Controller
         $pedidos = Pedido::all();
         return view('pedidos.index', compact('pedidos'));
     }
-
     
     public function create()
     {
@@ -26,7 +25,6 @@ class PedidoController extends Controller
         Pedido::create($request->except('data_pedido')); 
         return redirect('pedidos')->with('success', 'Pedido criado com sucesso.');
     }
-
 
     public function edit($id)
     {
@@ -46,6 +44,22 @@ class PedidoController extends Controller
         $pedido = Pedido::findOrFail($id);
         $pedido->delete();
         return redirect('pedidos')->with('success', 'pedido deleted successfully.');
+    }
+
+    public function concluir($id)
+    {
+        $pedido = Pedido::findOrFail($id);
+        $pedido->status_pedido = 'Concluído'; 
+        $pedido->save();
+        return redirect('pedidos')->with('status', 'Pedido marcado como concluído!');
+    }
+
+    public function cancelar($id)
+    {
+        $pedido = Pedido::findOrFail($id);
+        $pedido->status_pedido = 'Cancelado';
+        $pedido->save();
+        return redirect('pedidos')->with('status', 'Pedido cancelado com sucesso!');
     }
 
 }

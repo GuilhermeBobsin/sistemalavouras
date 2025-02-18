@@ -40,3 +40,8 @@ Route::delete('pedidos/{id}', [PedidoController::class, 'destroy']);
 
 Route::match(['get', 'post'], '/formulario', [CalculadoraController::class, 'mostrarFormulario']);
 
+Route::get('clientes/{cliente}/pedidos', [ClienteController::class, 'showPedidos'])->name('clientes.pedidos');
+
+Route::post('/pedidos/{id}/concluir', [PedidoController::class, 'concluir'])->name('pedidos.concluir');
+Route::post('/pedidos/{id}/cancelar', [PedidoController::class, 'cancelar'])->name('pedidos.cancelar');
+
