@@ -5,6 +5,7 @@ use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\PlantioController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -45,3 +46,10 @@ Route::get('clientes/{cliente}/pedidos', [ClienteController::class, 'showPedidos
 Route::post('/pedidos/{id}/concluir', [PedidoController::class, 'concluir'])->name('pedidos.concluir');
 Route::post('/pedidos/{id}/cancelar', [PedidoController::class, 'cancelar'])->name('pedidos.cancelar');
 
+
+Route::get('plantios', [PlantioController::class, 'index']);
+Route::get('plantios/create', [PlantioController::class, 'create']);
+Route::post('plantios', [PlantioController::class, 'store']);
+Route::get('plantios/{id}/edit', [PlantioController::class, 'edit']);
+Route::put('plantios/{id}', [PlantioController::class, 'update']);
+Route::delete('plantios/{id}', [PlantioController::class, 'destroy']);

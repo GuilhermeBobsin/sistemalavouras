@@ -105,7 +105,7 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-purple">
               <div class="inner">
-                <h3>Plantios</h3>
+                <h3>Calendário</h3>
 
                 <p>Épocas de produções</p>
               </div>
@@ -115,12 +115,26 @@
               <a href="/calendarioagricola" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box" style="background-color: #F79100;" >
+              <div class="inner">
+                <h3 style="color: white;" >Plantios</h3>
+
+                <p style="color: white;" >Registros de plantios</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-leaf"></i>
+              </div>
+              <a href="/" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
           
 @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css"> 
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    
 @stop
 
 @section('js')
