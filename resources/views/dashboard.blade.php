@@ -47,7 +47,7 @@
               <div class="icon">
                 <i class="fas fa-hourglass-half"></i>
               </div>
-              <a href="/pedidos/PedidosPende" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/pedidosPendentes" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">
@@ -90,6 +90,19 @@
             </div>
           </div>
           <div class="col-lg-3 col-6">
+            <div class="small-box" style="background-color:rgb(41, 28, 21);" >
+              <div class="inner">
+                <h3 style="color: white;" >{{ number_format($areaHectares, 1)}} hc</h3>
+
+                <p style="color: white;" >Área total ocupada</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-leaf"></i>
+              </div>
+              <a href="/plantios" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>Mapa</h3>
@@ -125,7 +138,7 @@
               <div class="icon">
                 <i class="ion ion-leaf"></i>
               </div>
-              <a href="/" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/plantios" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           

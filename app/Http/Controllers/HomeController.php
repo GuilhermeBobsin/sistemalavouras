@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use App\Models\Pedido;
+use App\Models\Plantio;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -57,8 +58,11 @@ class HomeController extends Controller
         $pedidosConcluidos = Pedido::where('status_pedido', 'concluido')->count();
         $pedidosPendentes = Pedido::where('status_pedido', 'pendente')->count();
         $pedidosCancelados = Pedido::where('status_pedido', 'cancelado')->count();
-        return view('dashboard', compact('clientes', 'pedidos', 'duzias', 'pedidosConcluidos', 'pedidosPendentes', 'pedidosCancelados'));
+        $totalBandeijas = Plantio::sum('quantidade_bandeijas');
+        $areaHectares = $totalBandeijas / 350;
+        return view('dashboard', compact('clientes', 'pedidos', 'duzias', 'pedidosConcluidos', 'pedidosPendentes', 'pedidosCancelados', 'areaHectares'));
     }
+    
     /**
      * Create a new controller instance.
      *
