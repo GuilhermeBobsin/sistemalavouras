@@ -27,7 +27,7 @@
                         <td>{{ $plantio->produto }}</td>
                         <td>{{ $plantio->quantidade_bandeijas }}</td>
                         <td>{{ \Carbon\Carbon::parse($plantio->data_plantio)->format('d/m/Y') }}</td>
-                        <td>{{ $plantio->quantidade_bandeijas * 200 }}</td>
+                        <td>{{ number_format($plantio->quantidade_bandeijas * 200, 0, '', '.') }}</td>
                         <td>{{ number_format($plantio->quantidade_bandeijas / 350, 1)}} hectares</td>
                         <td class="text-center">
                             <a href="{{ url('plantios/'.$plantio->id.'/edit') }}" class="btn btn-sm">
