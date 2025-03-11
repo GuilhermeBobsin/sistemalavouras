@@ -69,6 +69,9 @@
                     </table>
                 </div>
             </div>
+            <a href="{{ url("/cliente/{$cliente->id}/pedidos/pdf") }}" class="btn btn-primary"><i class="fas fa-download"></i> Gerar PDF</a>
+
+
         </div>
     </div>
 @stop

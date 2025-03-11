@@ -3,6 +3,7 @@
 use App\Http\Controllers\CalculadoraController;
 use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ControlePdf;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\PlantioController;
@@ -53,3 +54,7 @@ Route::post('plantios', [PlantioController::class, 'store']);
 Route::get('plantios/{id}/edit', [PlantioController::class, 'edit']);
 Route::put('plantios/{id}', [PlantioController::class, 'update']);
 Route::delete('plantios/{id}', [PlantioController::class, 'destroy']);
+
+Route::get('/pedidos/{id}/pdf', [ControlePdf::class, 'gerarPDF'])->name('pdf.pedido');
+Route::get('/cliente/{cliente_id}/pedidos/pdf', [ControlePdf::class, 'gerarPdfCliente']);
+
