@@ -29,8 +29,10 @@ class PedidoController extends Controller
     public function edit($id)
     {
         $pedido = Pedido::findOrFail($id);
-        return view('pedidos.edit', compact('pedido'));
+        $clientes = Cliente::all(); // Carrega todos os clientes
+        return view('pedidos.edit', compact('pedido', 'clientes')); // Passando 'clientes' e 'pedido' para a view
     }
+
 
     public function update(Request $request, $id)
     {

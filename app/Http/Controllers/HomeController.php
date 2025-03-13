@@ -44,7 +44,6 @@ class HomeController extends Controller
         $brocolis = Pedido::where('produto', 'brocolis')->sum('quantidade');
         $repolho = Pedido::where('produto', 'repolho')->sum('quantidade');
         $couveFlor = Pedido::where('produto', 'couveflor')->sum('quantidade');
-
         return view('controleduzias', compact('alfaceCrespa', 'alfaceAmericana', 
         'alfaceLisa', 'mimosaVerde', 'mimosaRoxa', 'alfaceChicoria', 'brocolis', 'repolho', 'couveFlor'));
     }

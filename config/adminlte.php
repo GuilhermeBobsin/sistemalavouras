@@ -171,37 +171,37 @@ return [
 
         [
             'text' => ' Planejamento',
-            'url' => 'depois/vejo',
+            'url' => '',
             'icon' => 'fas fa-calendar-alt', // Ícone de calendário
         ],
 
         [
             'text' => ' Calculadora',
-            'url' => 'depois/vejo',
+            'url' => '',
             'icon' => 'fas fa-calculator', // Ícone médico
         ],
         
         [
             'text' => ' Clima',
-            'url' => 'depois/vejo',
+            'url' => '',
             'icon' => 'fas fa-cloud-sun', // Ícone de clima
         ],
         
         [
             'text' => ' Colheita',
-            'url' => 'depois/vejo',
+            'url' => '',
             'icon' => 'fas fa-seedling', // Ícone de planta
         ],
         
         [
             'text' => ' Financeiro',
-            'url' => 'depois/vejo',
+            'url' => '',
             'icon' => 'fas fa-dollar-sign', // Ícone de dinheiro
         ],
         
         [
             'text' => ' Gestão de Doenças',
-            'url' => 'depois/vejo',
+            'url' => '',
             'icon' => 'fas fa-notes-medical', // Ícone médico
         ],
 

@@ -8,15 +8,16 @@
 
 @section('content')
 <div class="container">
-    <div class="card shadow-sm">
+    <div class="card shadow-lg">
+        <div class="card-header text-white" style="background-color: #28a745;">
+            <h3 class="card-title">Formulário de Pedido</h3>
+        </div>
         <div class="card-body">
             <form action="{{ url('pedidos') }}" method="POST">
                 @csrf
 
-                <!-- Selecionar Cliente -->
                 <div class="mb-3">
                     <label for="cliente_id" class="form-label">Cliente</label>
-                    <br>
                     <select name="cliente_id" id="cliente_id" class="form-select" required>
                         <option value="" selected disabled>Selecione um cliente</option>
                         @foreach($clientes as $cliente)
@@ -25,10 +26,8 @@
                     </select>
                 </div>
 
-                <!-- Selecionar Produto -->
                 <div class="mb-3">
                     <label for="produto" class="form-label">Produto</label>
-                    <br>
                     <select name="produto" id="produto" class="form-select" required>
                         <option value="" selected disabled>Selecione um produto</option>
                         <option value="americana">Alface Americana</option>
@@ -43,21 +42,18 @@
                     </select>
                 </div>
 
-                <!-- Quantidade -->
                 <div class="mb-3">
-                    <label for="quantidade" class="form-label">Quantidade em Dúzias</label>
+                    <label for="quantidade" class="form-label">Quantidade (Dúzias)</label>
                     <input type="number" name="quantidade" id="quantidade" class="form-control" min="1" required>
                 </div>
 
-                <!-- Preço Unitário -->
                 <div class="mb-3">
-                    <label for="preco_unitario" class="form-label">Preço Unitário</label>
+                    <label for="preco_unitario" class="form-label">Preço (Dúzia)</label>
                     <input type="number" step="0.01" name="preco_unitario" id="preco_unitario" class="form-control" required>
                 </div>
 
-                <!-- Botão de Enviar -->
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success btn-lg">Criar Pedido</button>
+                    <button type="submit" class="btn btn-success btn-lg w-100">Criar Pedido</button>
                 </div>
             </form>
         </div>
@@ -69,13 +65,13 @@
 <style>
     .container {
         margin-top: 40px;
-        width: 80%;
+        width: 70%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .card {
-        border-radius: 10px;
+        border-radius: 15px;
     }
 
     label {
@@ -84,8 +80,8 @@
     }
 
     .form-select, .form-control {
-        border-radius: 5px;
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     .form-select:focus, .form-control:focus {
@@ -93,8 +89,8 @@
     }
 
     .btn-success {
-        width: 100%;
         font-size: 1.2rem;
+        padding: 12px;
     }
 
     .card-header {
@@ -109,6 +105,10 @@
 
     .mb-3 {
         margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
     }
 </style>
 @stop

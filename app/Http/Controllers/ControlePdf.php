@@ -20,9 +20,7 @@ class ControlePdf extends Controller
     {
         $cliente = Cliente::findOrFail($cliente_id); 
         $pedidos = $cliente->pedidos; 
-    
-        $pdf = PDF::loadView('pdf.pedidoCliente', compact('pedidos', 'cliente'));
-
+        $pdf = PDF::loadView('pdf.pedidoCliente', compact('pedidos', 'cliente'))->setPaper("a4");
         return $pdf->stream("pedidos_cliente_{$cliente->id}.pdf");
     }
 

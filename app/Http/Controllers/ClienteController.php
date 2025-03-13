@@ -46,13 +46,8 @@ class ClienteController extends Controller
 
     public function showPedidos($id)
     {
-        // Encontre o cliente pelo ID
         $cliente = Cliente::findOrFail($id);
-
-        // Recupere os pedidos relacionados ao cliente
-        $pedidos = $cliente->pedidos; // Supondo que o relacionamento já exista
-
-        // Retorne a view com os pedidos
+        $pedidos = $cliente->pedidos; 
         return view('clientes.pedidos', compact('cliente', 'pedidos'));
     }
 

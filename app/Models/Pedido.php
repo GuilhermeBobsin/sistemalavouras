@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pedido extends Model
 {
-    // Remover 'data_pedido' do array fillable, pois agora será gerenciado automaticamente
     protected $fillable = [
         'cliente_id',
         'produto',
@@ -15,7 +14,6 @@ class Pedido extends Model
         'status_pedido',
     ];
 
-    // Definir o relacionamento com o cliente
     public function cliente()
     {
         return $this->belongsTo(Cliente::class, 'cliente_id', 'id');
